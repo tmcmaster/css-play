@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.cube {
+	position:absolute;
+    display: block;
+    left: 100px;
+    top: 150px;
+	width:100px;
+    height:100px;
+    background:blue;
+    transform: skew(15deg, 15deg);
+    
+    box-shadow: 100px 100px teal, -100px 185px purple;
+}
+
+div.cube::before {
+    content: "";
+    width:100px;
+    height:100px;
+    position:absolute;
+    display: block;
+    left: 100px;
+    top: -44px;
+    background: yellow;
+    transform: skew(0deg, -40deg);
+    
+    box-shadow: 100px 185px cyan, -100px 100px green;
+}
+
+div.cube::after {
+	content: "";
+    width:95px;
+    height:86px;
+    border:solid red 1px;
+    position:absolute;
+    display: block;
+    left: 54px;
+    top: -88px;
+    background: red;
+    transform: skew(-50deg, 0deg);
+    
+    box-shadow: 220px 100px orange, 120px 185px lightgrey;
+}
+
+</style>
+</head>
+<body>
+
+<div class="cube"></div>
+
+</body>
+</html>
